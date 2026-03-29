@@ -1,11 +1,6 @@
-# Songhu Vercel Deploy
+# Songhu
 
-This folder is the deploy root for the Vercel project `skill-deploy-oi2u4oi62w`.
-
-Keep these files:
-
-- `index.html`: the production page entry
-- `.vercel/project.json`: the link to the existing Vercel project
+Static Vercel deploy for the Songhu proposal page.
 
 Deploy from this folder:
 
@@ -16,4 +11,3 @@ npx vercel --prod --yes
 Current fixed URL:
 
 - `https://skill-deploy-oi2u4oi62w.vercel.app`
-# Songhu
