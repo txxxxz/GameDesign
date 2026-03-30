@@ -355,6 +355,34 @@
       line-height: 1.3;
     }
 
+    .level-slide h2 {
+      font-size: clamp(2.7rem, 3.6vw, 4.05rem);
+      line-height: 1;
+    }
+
+    .level-slide .level-panel {
+      gap: 0.56rem;
+    }
+
+    .level-slide .level-panel strong {
+      font-size: clamp(1.34rem, 1.5vw, 1.62rem);
+      margin-bottom: 0.12rem;
+    }
+
+    .level-slide .level-panel p {
+      font-size: clamp(1.08rem, 1.16vw, 1.24rem);
+      line-height: 1.36;
+    }
+
+    .level-slide .path-note {
+      font-size: clamp(1.34rem, 1.5vw, 1.56rem);
+      padding: 0.95rem 1.15rem;
+    }
+
+    .level-slide .arrow {
+      font-size: clamp(1.7rem, 1.9vw, 2rem);
+    }
+
     .level-diagram {
       margin-top: 0.18rem;
       border-radius: 18px;
@@ -713,10 +741,112 @@
       font-size: clamp(1.52rem, 1.78vw, 1.9rem);
     }
 
+    .tech-note {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.7rem 1.15rem;
+      font-size: clamp(1rem, 1.12vw, 1.16rem);
+      line-height: 1.35;
+    }
+
+    .tech-note strong {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: clamp(1.18rem, 1.3vw, 1.32rem);
+      letter-spacing: 0.04em;
+    }
+
+    .tech-note span {
+      color: var(--text-soft);
+    }
+
+    .type-tech-slide .split {
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 1rem;
+    }
+
+    .type-tech-slide .layout {
+      grid-template-rows: minmax(0, 1fr) auto;
+      gap: 0.82rem;
+      align-content: stretch;
+    }
+
+    .type-tech-slide .stack {
+      gap: 0.72rem;
+    }
+
+    .type-tech-slide h2 {
+      font-size: clamp(2.18rem, 2.85vw, 3.18rem);
+      line-height: 1;
+    }
+
+    .type-tech-slide .panel {
+      padding: 0.88rem 0.98rem 0.92rem;
+    }
+
+    .type-tech-slide .panel strong {
+      font-size: clamp(1.28rem, 1.42vw, 1.48rem);
+      margin-bottom: 0.22rem;
+    }
+
+    .type-tech-slide .panel p,
+    .type-tech-slide .panel li {
+      font-size: clamp(0.96rem, 1vw, 1.06rem);
+      line-height: 1.28;
+    }
+
+    .type-tech-slide .big-list {
+      gap: 0.72rem;
+    }
+
+    .type-tech-slide .tech-note {
+      padding: 0.84rem 1rem;
+      font-size: clamp(0.9rem, 0.98vw, 1rem);
+      gap: 0.55rem 1rem;
+    }
+
+    .type-tech-slide .tech-note strong {
+      font-size: clamp(1.04rem, 1.12vw, 1.14rem);
+    }
+
     .arrow {
       color: var(--gold);
       font-family: var(--serif);
       font-size: clamp(1.9rem, 2.2vw, 2.3rem);
+    }
+
+    .loop-line {
+      font-family: var(--serif);
+      font-size: clamp(1.42rem, 1.62vw, 1.78rem);
+      line-height: 1.28;
+      color: rgba(217, 190, 144, 0.96);
+    }
+
+    .motivation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .goal-card {
+      display: grid;
+      gap: 0.85rem;
+      align-content: start;
+      min-height: 100%;
+    }
+
+    .goal-tag {
+      color: rgba(217, 190, 144, 0.9);
+      font-size: 0.92rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .goal-card li {
+      font-size: clamp(1.08rem, 1.18vw, 1.24rem);
+      line-height: 1.36;
     }
 
     .choice-card {
@@ -898,7 +1028,7 @@
           <div class="content">
             <div class="meta">
               <div class="eyebrow">Title Slide</div>
-              <div class="index">01 / 08</div>
+              <div class="index">01 / 09</div>
             </div>
             <div class="split">
               <div class="cover-copy">
@@ -910,11 +1040,11 @@
                 <div class="panel soft">
                   <strong>Group Members</strong>
                   <div class="members">
-                    <div class="member">Zhou Chendi</div>
-                    <div class="member">Liang Shiyao</div>
-                    <div class="member">Ao Jiaqi</div>
-                    <div class="member">Chen Xiang</div>
-                    <div class="member">Li Zhe</div>
+                    <div class="member">Zhou Chendi(Design)</div>
+                    <div class="member">Liang Shiyao(Story Design)</div>
+                    <div class="member">Ao Jiaqi(Art)</div>
+                    <div class="member">Chen Xiang(Sound Design)</div>
+                    <div class="member">Li Zhe(Development)</div>
                   </div>
                 </div>
               </div>
@@ -930,45 +1060,50 @@
           </div>
         </section>
 
-        <section class="slide">
+        <section class="slide type-tech-slide">
           <div class="scene">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg" alt="Torii path with lantern">
           </div>
           <div class="content">
             <div class="meta">
-              <div class="eyebrow">Game Type &amp; Experience</div>
-              <div class="index">02 / 08</div>
+              <div class="eyebrow">Game Type &amp; Technology</div>
+              <div class="index">02 / 09</div>
             </div>
-            <div class="split">
-              <div class="stack">
-                <h2>Game Type</h2>
-                <div class="panel">
-                  <strong>Core Position</strong>
-                  <p>2D platformer <span class="term-note"></span> with puzzle elements <span class="term-note"></span> and narrative-driven gameplay <span class="term-note"></span>.</p>
+            <div class="layout">
+              <div class="split">
+                <div class="stack">
+                  <h2>Game Type / Technology</h2>
+                  <div class="panel">
+                    <strong>Core Position</strong>
+                    <p>2D platformer <span class="term-note"></span> with puzzle elements <span class="term-note"></span> and narrative-driven gameplay <span class="term-note"></span>.</p>
+                    <p>Scope: 3 levels, one core mechanic, and a strong focus on emotional impact.</p>
+                  </div>
+                  <div class="panel">
+                    <strong>Player Experience</strong>
+                    <ul class="big-list">
+                      <li>Learn the rules.</li>
+                      <li>Follow the rules.</li>
+                      <li>Then question the rules.</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="panel">
-                  <strong>Player Experience</strong>
-                  <ul class="big-list">
-                    <li>Learn the rules.</li>
-                    <li>Follow the rules.</li>
-                    <li>Then question the rules.</li>
-                  </ul>
-                </div>
-                <div class="panel">
-                  <strong>Project Scope</strong>
-                  <p>3 levels, one core mechanic, and a strong focus on emotional impact.</p>
+                <div class="image-card">
+                  <img src="assets/page2-tech-demo.png" alt="Songhu gameplay prototype showing how the player finds ritual items, stores them in the offering tube, and completes the altar">
+                  <div class="image-label">How the Player Plays / prototype flow</div>
+                  <div class="credit">Prototype visual</div>
                 </div>
               </div>
-              <div class="image-card">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg" alt="Torii path with lantern at Fushimi Inari">
-                <div class="image-label">Order, ritual, and movement</div>
-                <div class="credit">Wikimedia Commons</div>
+              <div class="path-note tech-note">
+                <strong>Tech Stack</strong>
+                <span>Suno: music</span>
+                <span>Godot: development</span>
+                <span>Nano Banana + RPG Maker: image generation</span>
               </div>
             </div>
           </div>
           <div class="foot">
-            
-            <div>Type / Experience / Scope</div>
+            <div>Type / Experience / Prototype</div>
+            <div>Gameplay flow visual</div>
           </div>
         </section>
 
@@ -979,7 +1114,7 @@
           <div class="content">
             <div class="meta">
               <div class="eyebrow">Core Gameplay</div>
-              <div class="index">03 / 08</div>
+              <div class="index">03 / 09</div>
             </div>
             <div class="split">
               <div class="stack compact-copy">
@@ -992,10 +1127,16 @@
                   <ul class="big-list">
                     <li>Items must be stored in the container.</li>
                     <li>Once stored, items cannot be changed.</li>
+                    <li>If an item is not stored in the bag, it disappears <span class="term-note">（不放进背包就会消失）</span>.</li>
                     <li>The bag uses Last In, First Out <span class="term-note"></span>.</li>
                     <li>The altar <span class="term-note">（祭坛）</span> reads items from bottom to top.</li>
                     <li>The player must collect items in reverse order.</li>
                   </ul>
+                </div>
+                <div class="panel compact-copy">
+                  <strong>Game Loop</strong>
+                  <p class="loop-line">Explore → Collect → Choose → Store → Complete ritual → Unlock next truth</p>
+                  <p>If an item is not stored in the bag, it disappears <span class="term-note">（不放进背包就会消失）</span>. That upgrades the mechanic from sorting to sorting plus trade-off.</p>
                 </div>
               </div>
               <div class="tube-card">
@@ -1038,19 +1179,18 @@
             </div>
           </div>
           <div class="foot">
-           
-            <div>Stack / Order / Planning</div>
+            <div>Stack / Order / Trade-off</div>
           </div>
         </section>
 
-        <section class="slide">
+        <section class="slide level-slide">
           <div class="scene soft-center">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Path_to_Katori_Shrine,_Chiba%3B_2010.jpg" alt="Path to shrine">
           </div>
           <div class="content">
             <div class="meta">
               <div class="eyebrow">Level Design</div>
-              <div class="index">04 / 08</div>
+              <div class="index">04 / 09</div>
             </div>
             <div class="layout">
               <h2>Level Design</h2>
@@ -1120,7 +1260,7 @@
                 <div class="panel level-panel">
                   <strong>Level 2</strong>
                   <p>Exploration <span class="term-note"></span>.</p>
-                  <p>A short split path shows where key items sit before the route joins again.</p>
+                  <p>A split path forces a choice: if an item is not stored in the bag, it disappears.</p>
                   <div class="level-diagram">
                     <svg viewBox="0 0 320 248" role="img" aria-label="Level 2 diagram">
                       <defs>
@@ -1262,13 +1402,69 @@
         </section>
 
         <section class="slide">
+          <div class="scene soft-center">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi_Inari-taisha_lanterne_torii.jpg" alt="Lantern and torii at Fushimi Inari">
+          </div>
+          <div class="content">
+            <div class="meta">
+              <div class="eyebrow">Motivation Flow</div>
+              <div class="index">05 / 09</div>
+            </div>
+            <div class="layout">
+              <h2>Motivation Flow</h2>
+              <div class="motivation-grid">
+                <div class="panel goal-card compact-copy">
+                  <div class="goal-tag">Short-term</div>
+                  <strong>Immediate Goal</strong>
+                  <ul class="big-list">
+                    <li>Explore the current room.</li>
+                    <li>Spot an offering before it disappears.</li>
+                    <li>Decide whether to store it right now.</li>
+                  </ul>
+                </div>
+                <div class="panel goal-card compact-copy">
+                  <div class="goal-tag">Mid-term</div>
+                  <strong>Level Goal</strong>
+                  <ul class="big-list">
+                    <li>Choose a route and manage bag order.</li>
+                    <li>Give up some items so the ritual can still work.</li>
+                    <li>Complete the current ritual correctly.</li>
+                  </ul>
+                </div>
+                <div class="panel goal-card compact-copy">
+                  <div class="goal-tag">Long-term</div>
+                  <strong>Narrative Goal</strong>
+                  <ul class="big-list">
+                    <li>Unlock the next truth behind the ritual.</li>
+                    <li>Understand why the village hides the meaning.</li>
+                    <li>Reach the final moral choice.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="path-note">
+                <span>Motivation</span>
+                <span class="arrow">Act</span>
+                <span class="arrow">→</span>
+                <span class="arrow">Plan</span>
+                <span class="arrow">→</span>
+                <span class="arrow">Understand</span>
+              </div>
+            </div>
+          </div>
+          <div class="foot">
+            <div>Short-term / Mid-term / Long-term goals</div>
+            <div>Motivation Flow</div>
+          </div>
+        </section>
+
+        <section class="slide">
           <div class="scene">
             <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi_Inari_Taisha_Torii_Miko_ceremony.jpg" alt="Miko ceremony at Fushimi Inari">
           </div>
           <div class="content">
             <div class="meta">
               <div class="eyebrow">Story Setup</div>
-              <div class="index">05 / 08</div>
+              <div class="index">06 / 09</div>
             </div>
             <div class="story-grid">
               <div class="stack compact-copy">
@@ -1320,7 +1516,7 @@
           <div class="content">
             <div class="meta">
               <div class="eyebrow">Twist &amp; Meaning</div>
-              <div class="index">06 / 08</div>
+              <div class="index">07 / 09</div>
             </div>
             <div class="split">
               <div class="image-card">
@@ -1363,20 +1559,27 @@
           <div class="content">
             <div class="meta">
               <div class="eyebrow">Ending</div>
-              <div class="index">07 / 08</div>
+              <div class="index">08 / 09</div>
             </div>
             <div class="layout">
               <h2>Ending</h2>
               <div class="ending-grid">
                 <div class="choice-card left">
                   <strong>Final Choice A</strong>
-                  <p>Stay silent <span class="term-note">（不呼其名）</span>.</p>
-                  <p>The ritual <span class="term-note">（仪式）</span> continues.</p>
+                  <p>Stay silent <span class="term-note"></span>.</p>
+                  <p>The ritual <span class="term-note"></span> continues.</p>
+                  <p>The village remains peaceful.</p>
+                  <p> The truth stays hidden.</p>
+                  <p>The cycle of sacrifice continues.</p>
+                  
                 </div>
                 <div class="choice-card right">
                   <strong>Final Choice B</strong>
-                  <p>Call the name <span class="term-note">（呼其名）</span>.</p>
-                  <p>The ritual <span class="term-note">（仪式）</span> breaks.</p>
+                  <p>Call the name <span class="term-note"></span>.</p>
+                  <p>The ritual <span class="term-note"></span> breaks.</p>
+                  <p>Reveal the hidden truth</p>
+                  <p>The village loses its false peace</p>
+                  <p>The player refuses the cycle of sacrifice</p>
                 </div>
               </div>
               <div class="result-panel">
@@ -1397,32 +1600,51 @@
           </div>
           <div class="content">
             <div class="meta">
-              <div class="eyebrow">Thanks</div>
-              <div class="index">08 / 08</div>
+              <div class="eyebrow">Technology &amp; Design Lens</div>
+              <div class="index">09 / 09</div>
             </div>
             <div class="split">
-              <div class="stack" style="align-content:center;">
-                <h2>Thanks</h2>
-                
+              <div class="stack compact-copy">
+                <h2>Technology</h2>
+                <div class="panel">
+                  <strong>Prototype Need</strong>
+                  <ul class="big-list">
+                    <li>2D traversal through shrine spaces and room-to-room progression.</li>
+                    <li>A stack-based bag that locks order once items are stored.</li>
+                    <li>State tracking for missing items, completed rituals, and unlocked truths.</li>
+                  </ul>
+                </div>
+                <div class="panel">
+                  <strong>Why It Fits</strong>
+                  <p>The concept does not need huge content or complex combat. The technology supports sequence, choice, and consequence in a student-sized prototype.</p>
+                </div>
               </div>
-              <div class="image-card">
-                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fushimi_Inari-taisha_at_night_Japan_20170410100448_%2833536766464%29.jpg" alt="Night shrine">
-                <div class="image-label">Final slide</div>
-                <div class="credit">Wikimedia Commons</div>
+              <div class="stack compact-copy">
+                <h2>Elemental Tetrad</h2>
+                <div class="panel">
+                  <strong>Four Elements</strong>
+                  <ul class="big-list">
+                    <li><strong>Mechanics:</strong> ordering, storing, losing items, and completing rituals.</li>
+                    <li><strong>Story:</strong> a shrine apprentice slowly learns the ritual is morally wrong.</li>
+                    <li><strong>Aesthetics:</strong> formal beauty, sacred spaces, and quiet unease.</li>
+                    <li><strong>Technology:</strong> a lightweight 2D system that expresses sequence, choice, and consequence.</li>
+                  </ul>
+                </div>
+               
               </div>
             </div>
           </div>
           <div class="foot">
-            
-            <div>Thanks</div>
+            <div>Technology / Mechanics / Story / Aesthetics</div>
+            <div>Elemental Tetrad</div>
           </div>
         </section>
 
       </div>
 
       <div class="progress-wrap" aria-hidden="true">
-        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-        <div class="progress-text" id="progressText">01 / 08</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:11.11%"></div></div>
+        <div class="progress-text" id="progressText">01 / 09</div>
       </div>
     </div>
   </div>
